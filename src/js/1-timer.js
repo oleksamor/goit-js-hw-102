@@ -1,5 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
 
 const fieldDatatime = document.getElementById("datetime-picker");
 console.log(fieldDatatime);
@@ -22,7 +24,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     console.log(selectedDates[0]);
-    
+
     userSelectedDate = selectedDates[0];
     if (userSelectedDate < Date.now()) {
       iziToast.error({
