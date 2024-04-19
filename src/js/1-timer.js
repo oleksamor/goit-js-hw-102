@@ -69,8 +69,7 @@ function start() {
     if (countdown < 0) {
       clearInterval(timerId);
       startBtn.disabled = true;
-
-      return;
+     return;
     }
     startBtn.disabled = true;
     refs.calendar.disabled = true;
